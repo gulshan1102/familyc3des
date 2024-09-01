@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Donate</title>
+    <link rel="stylesheet" href="donate.css">
+    <meta name="viewport" content="width=device-width", initial-scale="1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+    <meta name="viewport" content="width =device-width, initial-scale =1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@200&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+<script src="https://kit.fontawesome.com/681151b652.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<section id="donate">
+    <div class="container">
+        <h3>CHRIST CENTRED CHURCH</h3>
+        <img src="images/qr.jpeg">
+    <div class="label">
+        UPI ID
+    </div>
+    <div class="copy-text">
+        <input type="text" class="text" value="christcentredchurch@sbi">
+        <button>
+            <i class="fa fa-clone"></i>
+        </button>
+    </div>
+</div>
+</section>
+<script>
+    let copyText = document.querySelector(".copy-text");
+copyText.querySelector("button").addEventListener("click",function(){
+    let input=copyText.querySelector("input.text");
+    input.select();
+    document.execCommand("copy");
+    copyText.classList.add("active");
+    window.getSelection().removeAllRanges();
+    setTimeout(function() {
+        copyText.classList.remove("active");
+        
+    },2500);
+});
+</script>
+</body>
+</html>
